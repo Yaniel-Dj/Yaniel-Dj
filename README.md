@@ -26,10 +26,13 @@ Me dedico al **retroporting de World of Warcraft** y al desarrollo web con **PHP
 
 ---
 
-### 📌 Proyecto destacado
+### 📌 Proyectos destacados
 
 #### 🌐 [Paginas-php](https://github.com/Yaniel-Dj/Paginas-php)
 Mis aportes en **PHP puro** para servidores **AzerothCore** (WoW 3.3.5a): registro con SRP6, login, panel de cuenta, jugadores online, rankings y más. Sin frameworks, sin Composer: copias el archivo, configuras y funciona.
+
+#### 🐉 [Archivero-lua](https://github.com/Yaniel-Dj/Archivero-lua)
+Mi colección de **scripts en Lua** para AzerothCore con **Eluna**. Cada script es independiente: lo copias a `lua_scripts`, revisas su cabecera y funciona. Incluye NPCs, sistemas y utilidades comentadas en español.
 
 ---
 
