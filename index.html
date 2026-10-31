@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Yaniel-Dj - RGB Borders</title>
+    <title>Perfil de Yaniel-Dj</title>
     <style>
         /* --- VARIABLES GLOBALES --- */
         :root {
@@ -30,24 +30,52 @@
             width: 100%;
         }
 
-        /* --- CABECERA --- */
+        /* --- CABECERA Y BOTÓN --- */
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
-        .header h1 { p 
-            font-size: 2. {5rem; 
- color            margin-bottom: 10:px; 
-            text var-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
+        .header h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 10px; 
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
         }
-        .header(--text-muted); font-size: 1.1rem; }
+        .header p { 
+            color: var(--text-muted); 
+            font-size: 1.1rem; 
+            margin-bottom: 25px;
+        }
+
+        /* ESTILO DEL BOTÓN RETROPORTING */
+        .btn-retroporting {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--link-rgb);
+            text-decoration: none;
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.4);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-retroporting:hover {
+            background: rgba(88, 166, 255, 0.25);
+            border-color: rgb(88, 166, 255);
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
+            transform: translateY(-2px);
+            color: #fff;
+        }
 
         /* ==========================================
            🔥 BORDE RGB ANIMADO (CONTENEDOR) 🔥
            ========================================== */
         .rgb-border-container {
             position: relative;
-            /* Quitamos el fondo de aquí para que no interfiera */
             background: transparent; 
             border-radius: 12px;
             z-index: 1;
@@ -56,7 +84,7 @@
         .rgb-border-container::before {
             content: "";
             position: absolute;
-            inset: -3px; /* Hace que el borde sobresalga 3px */
+            inset: -3px;
             border-radius: 14px;
             z-index: -1;
             background: linear-gradient(90deg, 
@@ -83,7 +111,7 @@
         .stat-box {
             width: 100%;
             max-width: 450px;
-            padding: 3px; /* Espacio para el borde */
+            padding: 3px;
             display: flex;
         }
 
@@ -91,7 +119,7 @@
             width: 100%;
             height: auto;
             border-radius: 9px; 
-            background-color: rgb(13, 17, 23); /* Fondo sólido */
+            background-color: rgb(13, 17, 23);
         }
 
         /* --- SECCIÓN REPOSITORIOS --- */
@@ -109,11 +137,9 @@
             gap: 25px;
         }
 
-        /* AQUÍ ESTÁ LA MAGIA: FONDO 100% OPACO */
         .repo-card {
-            /* Fondo totalmente sólido, sin rgba para que no deje pasar la luz RGB */
             background-color: rgb(22, 27, 34); 
-            border-radius: 9px; /* Un poco menos que el contenedor para encajar */
+            border-radius: 9px;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -187,6 +213,9 @@
         <div class="header">
             <h1>👋 Yaniel-Dj</h1>
             <p>Retroporter de World of Warcraft & Desarrollador PHP / Lua</p>
+            
+            <!-- BOTÓN CORREGIDO CON LA URL Y TARGET BLANK -->
+            <a href="https://yaniel-dj.github.io/Web/" target="_blank" class="btn-retroporting">🛠️ Guía de Retroporting</a>
         </div>
 
         <!-- ESTADÍSTICAS CON BORDE RGB -->
