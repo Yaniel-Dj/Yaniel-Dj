@@ -10,6 +10,7 @@ Me dedico al **retroporting de World of Warcraft** y al desarrollo web con **PHP
 
 - 🐉 **Retroporting de WoW**: adapto contenido, parches y sistemas entre versiones.
 - 🌐 **Desarrollo web**: páginas PHP puras para servidores **AzerothCore**.
+- 🧩 **Maquetación web**: estructuro interfaces con **HTML5** y **CSS3**.
 - ⚙️ **Scripting**: lógica y sistemas de juego con **Lua**.
 
 ---
@@ -38,14 +39,16 @@ Mi colección de **scripts en Lua** para AzerothCore con **Eluna**. Cada script 
 
 ### 📊 Estadísticas de GitHub
 
-![Stats de Yaniel](https://github-readme-stats.vercel.app/api?username=Yaniel-Dj&show_icons=true&theme=radical)
-![Lenguajes](https://github-readme-stats.vercel.app/api/top-langs/?username=Yaniel-Dj&layout=compact&theme=radical)
+<div align="center">
+  <img src="./profile/stats.svg" alt="Stats de Yaniel" />
+  <img src="./profile/top-langs.svg" alt="Lenguajes" />
+</div>
 
 ---
 
 ### 📫 Contacto
 
-- 💬 Pregúntame sobre **retroporting de WoW, PHP o Lua**
+- 💬 Pregúntame sobre **retroporting de WoW, PHP, Lua o HTML**
 - 📧 **yanielaguilar4@gmail.com**
 
 ---
