@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Yaniel-Dj - RGB Borders</title>
+    <style>
+        /* --- VARIABLES GLOBALES --- */
+        :root {
+            --bg-color: rgb(9, 12, 16);
+            --text-main: rgb(201, 209, 217);
+            --text-muted: rgb(139, 148, 158);
+            --link-rgb: rgb(121, 192, 255);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* --- CABECERA --- */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 { p 
+            font-size: 2. {5rem; 
+ color            margin-bottom: 10:px; 
+            text var-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
+        }
+        .header(--text-muted); font-size: 1.1rem; }
+
+        /* ==========================================
+           🔥 BORDE RGB ANIMADO (CONTENEDOR) 🔥
+           ========================================== */
+        .rgb-border-container {
+            position: relative;
+            /* Quitamos el fondo de aquí para que no interfiera */
+            background: transparent; 
+            border-radius: 12px;
+            z-index: 1;
+        }
+
+        .rgb-border-container::before {
+            content: "";
+            position: absolute;
+            inset: -3px; /* Hace que el borde sobresalga 3px */
+            border-radius: 14px;
+            z-index: -1;
+            background: linear-gradient(90deg, 
+                #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000
+            );
+            background-size: 200% 200%;
+            animation: rgb-animation 4s linear infinite;
+        }
+
+        @keyframes rgb-animation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        /* --- SECCIÓN ESTADÍSTICAS --- */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            width: 100%;
+            max-width: 450px;
+            padding: 3px; /* Espacio para el borde */
+            display: flex;
+        }
+
+        .stat-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 9px; 
+            background-color: rgb(13, 17, 23); /* Fondo sólido */
+        }
+
+        /* --- SECCIÓN REPOSITORIOS --- */
+        .repos-title {
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(48, 54, 61, 0.8);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .repos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        /* AQUÍ ESTÁ LA MAGIA: FONDO 100% OPACO */
+        .repo-card {
+            /* Fondo totalmente sólido, sin rgba para que no deje pasar la luz RGB */
+            background-color: rgb(22, 27, 34); 
+            border-radius: 9px; /* Un poco menos que el contenedor para encajar */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .repo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .repo-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--link-rgb);
+            text-decoration: none;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+
+        .repo-name:hover { text-decoration: underline; }
+
+        .repo-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .repo-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(48, 54, 61, 0.8);
+            padding-top: 15px;
+        }
+
+        .repo-lang {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px currentColor; 
+        }
+
+        .repo-stats {
+            display: flex;
+            gap: 15px;
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- CABECERA -->
+        <div class="header">
+            <h1>👋 Yaniel-Dj</h1>
+            <p>Retroporter de World of Warcraft & Desarrollador PHP / Lua</p>
+        </div>
+
+        <!-- ESTADÍSTICAS CON BORDE RGB -->
+        <div class="stats-container">
+            <div class="rgb-border-container stat-box">
+                <img src="https://raw.githubusercontent.com/Yaniel-Dj/Yaniel-Dj/main/profile/stats.svg" alt="Stats de Yaniel">
+            </div>
+            <div class="rgb-border-container stat-box">
+                <img src="https://raw.githubusercontent.com/Yaniel-Dj/Yaniel-Dj/main/profile/top-langs.svg" alt="Lenguajes">
+            </div>
+        </div>
+
+        <!-- REPOSITORIOS DESTACADOS -->
+        <h2 class="repos-title">📌 Mis Proyectos Principales</h2>
+        <div class="repos-grid" id="repos-container">
+            <div class="loading">Cargando proyectos...</div>
+        </div>
+    </div>
+
+    <script>
+        const langColors = {
+            'PHP': 'rgb(79, 93, 149)',
+            'Lua': 'rgb(0, 0, 128)',
+            'HTML': 'rgb(227, 76, 38)',
+            'CSS': 'rgb(86, 61, 124)'
+        };
+
+        async function cargarRepositorios() {
+            const container = document.getElementById('repos-container');
+            const misRepos = ['Paginas-php', 'Archivero-lua'];
+            
+            try {
+                const promesas = misRepos.map(repoName => 
+                    fetch(`https://api.github.com/repos/Yaniel-Dj/${repoName}`)
+                        .then(res => {
+                            if (!res.ok) throw new Error(`Repo ${repoName} no encontrado`);
+                            return res.json();
+                        })
+                );
+
+                const reposData = await Promise.all(promesas);
+                
+                container.innerHTML = '';
+
+                reposData.forEach(repo => {
+                    const cardContainer = document.createElement('div');
+                    cardContainer.className = 'rgb-border-container';
+
+                    const card = document.createElement('div');
+                    card.className = 'repo-card';
+
+                    let colorLenguaje = repo.language && langColors[repo.language] ? langColors[repo.language] : 'rgb(204, 204, 204)';
+                    let nombreLenguaje = repo.language || 'Desconocido';
+
+                    card.innerHTML = `
+                        <a href="${repo.html_url}" target="_blank" class="repo-name">
+                            ${repo.name}
+                        </a>
+                        <p class="repo-description">
+                            ${repo.description ? repo.description : 'Sin descripción disponible.'}
+                        </p>
+                        <div class="repo-footer">
+                            <div class="repo-lang">
+                                <span class="lang-dot" style="background-color: ${colorLenguaje}; color: ${colorLenguaje};"></span>
+                                <span>${nombreLenguaje}</span>
+                            </div>
+                            <div class="repo-stats">
+                                <span>⭐ ${repo.stargazers_count}</span>
+                                <span>🍴 ${repo.forks_count}</span>
+                            </div>
+                        </div>
+                    `;
+
+                    cardContainer.appendChild(card);
+                    container.appendChild(cardContainer);
+                });
+
+            } catch (error) {
+                console.error(error);
+                container.innerHTML = '<div class="loading" style="color: rgb(248, 81, 73);">Error al cargar los repositorios. Límite de API alcanzado o nombres incorrectos.</div>';
+            }
+        }
+
+        cargarRepositorios();
+    </script>
+
+</body>
+</html>
