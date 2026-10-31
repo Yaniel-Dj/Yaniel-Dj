@@ -1,5 +1,7 @@
 # ¡Hola! Soy Yaniel 👋
 
+![Visitas al perfil](https://komarev.com/ghpvc/?username=Yaniel-Dj&color=blueviolet&style=flat)
+
 ### 🐉 Retroporter de World of Warcraft & Desarrollador PHP / Lua
 
 Me dedico al **retroporting de World of Warcraft** y al desarrollo web con **PHP**, además de scripting en **Lua**. Me apasiona revivir y adaptar contenido de WoW entre distintas versiones.
@@ -42,6 +44,12 @@ Mi colección de **scripts en Lua** para AzerothCore con **Eluna**. Cada script 
 <div align="center">
   <img src="./profile/stats.svg" alt="Stats de Yaniel" />
   <img src="./profile/top-langs.svg" alt="Lenguajes" />
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Yaniel-Dj&theme=radical" alt="Racha de commits" />
 </div>
 
 ---
